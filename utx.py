@@ -7,24 +7,23 @@ if sys.version_info[0] < 3:
 import random
 import re
 sys.path.append("modulos")
-from Zawiencom import *
-from osint import *
-from dos import *
-from phishing import *
-from exploit import *
-from bruteforce import *
-from autoinstalador import *
+from modulos.Zawiencom import *
+from modulos.osint import *
+from modulos.dos import *
+from modulos.phishing import *
+from modulos.exploit import *
+from modulos.bruteforce import *
+from modulos.autoinstalador import *
 from conf import *
-
 
 idioma = open("modulos/idioma.txt", "r+")
 leitor = idioma.readlines()
 analisa = len(leitor)
 if not analisa:
-	print ("[01] Português-Brasil")
-	print ("[02] Español")
-	print ("[03] English\n")
-	print ("Select a language")
+	print("[01] Português-Brasil")
+	print("[02] Español")
+	print("[03] English\n")
+	print("Select a language")
 	lingua_seleciona = input("Selecione uma linguagem: ")
 	if lingua_seleciona == "01" or lingua_seleciona == "1":
 		idioma.write("pt")
@@ -150,7 +149,7 @@ def main():
 			banner()
 			print ("\n")
 			print("  [1] Gathering Information")
-			print("  [2] Stress (DoS) ") 
+			print("  [2] Stress (DoS) ")
 			print("  [3] Phishing (Attack of credentials)")
 			print("  [4] Exploit & Scanners")
 			print("  [5] Brute-force")
@@ -205,7 +204,7 @@ def main():
 			banner()
 			print ("\n")
 			print("  [1] Recopilación de información")
-			print("  [2] Estrés (DoS) ") 
+			print("  [2] Estrés (DoS) ")
 			print("  [3] Phishing (Ataque de credenciales)")
 			print("  [4] Exploit & Scanners")
 			print("  [5] Fuerza bruta")
@@ -271,7 +270,7 @@ def att():
 			time.sleep(4)
 			restart_program()
 
-	
+
 		elif es == True:
 			print ("No hay actualizaciones.")
 			time.sleep(4)

@@ -41,6 +41,7 @@ else:
     dica1 = dicas_menu1_en
     dica2 = dicas_menu2_en
 
+
 def osint():
 			os.system("clear")
 			print ("  [1] Nmap")

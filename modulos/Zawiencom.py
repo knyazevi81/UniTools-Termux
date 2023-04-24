@@ -10,21 +10,23 @@ branco = '\033[37m'
 verde = '\033[32m'
 
 
-#Banner 
+#Banner
 def banner():
-	print ("                    #     # ####### #     # " )
-	print ("                    #     #    #     #   #  " )
-	print ("                    #     #    #      # #   " )
-	print ("                    #     #    #       #    " )
-	print ("                    #     #    #      # #   " )
-	print ("                    #     #    #     #   #  " )
-	print ("                     #####     #    #     #   v0.1.4" )
+	print("            #     # ####### #     # ")
+	print("            #     #    #     #   #  ")
+	print("            #     #    #      # #   ")
+	print("            #     #    #       #    ")
+	print("            #     #    #      # #   ")
+	print("            #     #    #     #   #  ")
+	print("             #####     #    #     #   v0.1.5 modificated by ilpdakz")
+
 
 # Reiniciar Programa
 def restart_program():
     python = sys.executable
-    os.execl(python, python, * sys.argv)
+    os.execl(python, python, *sys.argv)
     curdir = os.getcwd()
+
 
 # Utilidades para facilitar
 def erro():
@@ -33,6 +35,7 @@ def erro():
 	time.sleep(3)
 	os.system("clear")
 	restart_program()
+
 
 def instalador(url=None, name=None, move=True, installer=None):
 	update()
@@ -51,12 +54,14 @@ def instalador(url=None, name=None, move=True, installer=None):
 
 	pass
 
+
 def erro_en():
 	os.system("clear")
 	print ("OPS! It seems that you inserted an incorrect option :(")
 	time.sleep(3)
 	os.system("clear")
 	restart_program()
+
 
 def erro_es():
 	os.system("clear")
@@ -70,17 +75,21 @@ def cc():
 	os.system("clear")
 	print ("Concluido!")
 	time.sleep(3)
+
+
 def update():
 	os.system("pkg update -y && pkg upgrade -y")
 
+
 def root():
-	print ("Root é necessario")
-	print ("Deseja continuar?" + verde + "(S)im" + vermelho +"(N)ão" + branco)
+	print("Root é necessario")
+	print("Deseja continuar?" + verde + "(S)im" + vermelho +"(N)ão" + branco)
 	pedido_root = input("Selecione uma opção: ")
 	if pedido_root == "S" or pedido_root == "s" or pedido_root == "Sim" or pedido_root == "sim":
 		pass
 	else:
 		restart_program()
+
 
 def root_en():
 	print ("Root is required")
@@ -101,4 +110,3 @@ def root_es():
 		pass
 	else:
 		restart_program()
-		
